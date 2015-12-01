@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="The Page Description">
+		<style type="text/css">@-ms-viewport{width: device-width;}</style>
+		<title>Miyuki - Home page</title>
+		<link rel="stylesheet" href="css/layers.min.css" media="screen">
+		<link rel="stylesheet" href="css/font-awesome.min.css" media="screen"> 
+		<link rel="stylesheet" href="style.css" media="screen">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		<link rel="icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">	
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$("#mybutton").click( function(){
+				if( !$("#mysubject").val() || !$("#myemail").val() || !$("#mymessage").val()){
+					alert('未入力の項目があります');
+					return;
+				}
+
+            	var JSONdata = {
+                	"subject" : $("#mysubject").val(),
+                	"email" : $("#myemail").val(),      
+                	"message" : $("#mymessage").val()
+            	};
+            	
+            	var request = $.ajax({
+        			type : 'post',
+        			url : 'https://n0b2leka38.execute-api.us-west-2.amazonaws.com/prod/',
+        			data : JSON.stringify(JSONdata)
+        		});
+    		
+    			request.done(function(data, textStatus, jqXHR){
+  					alert('お問い合わせありがとうございました。');
+  					$("#myForm").submit();
+				});
+
+				request.fail(function( jqXHR, textStatus, errorThrown ) {
+  					alert('error:'+jqXHR+' '+ textStatus+ ' '+errorThrown);
+				});
+
+        	});
+	})
+	</script>
+
+	
+	</head>
+
+	<body class="page">
+
+		<header role="banner" class="transparent light">
+			<div class="row">
+				<div class="nav-inner row-content buffer-left buffer-right even clear-after">
+					<div id="brand">
+						<h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="home-01.html">Miyuki</a></h1>
+					</div><!-- brand -->
+					<a id="menu-toggle" href="#"><i class="fa fa-bars fa-lg"></i></a>
+					<nav>
+						<ul class="reset" role="navigation">
+							<li class="menu-item"><a href="#intro-wrap">Home</a></li>
+							<li class="menu-item"><a href="#experience-section">Experience</a></li>
+							<li class="menu-item"><a href="#skills-section">Skills</a></li>
+							<li class="menu-item"><a href="#cooking-section">Cooking</a></li>
+							<li class="menu-item"><a href="#contact-section">Contact</a></li>
+						</ul>
+					</nav>
+				</div><!-- row-content -->	
+			</div><!-- row -->	
+		</header>
+
+
+
+
+		<main role="main">
+
+		<!--div id="intro-wrap"-->
+			<div id="intro-wrap">				
+				<div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fadeUp">					
+
+					<div class="intro-item" style="background-image: url(img/1437.jpg);">
+						<div class="caption">
+							<h2>Beetle</h2>
+							<p>家族で囲む食卓</p>
+						</div><!-- caption -->
+					</div>									
+
+				</div><!-- intro -->
+			</div><!-- intro-wrap -->
+
+		<div id="main">
+
+		<!--div id="experience-section"-->
+		<div id="experience-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+		<section class="row section">
+					<div class="row-content buffer even clear-after">
+						<div class="timeline-label column six">
+							<h4>Work experience</h4>
+							<p>Specialties : User experience design, user interface design, brand identity, typography, print and packaging design, web standards, grid based layout.</p>
+							<a class="button transparent aqua">View on Linkedin</a>
+						</div><!-- timeline-label -->		
+						<div class="timeline column six last">
+							<div class="year">
+								<time datetime="2013">2013</time>
+								<div class="experience">
+									<span class="circle"></span>
+									<div class="experience-img"><img src="http://placehold.it/120x120/ddd/fff&text=Beetle%20image" alt=""></div>
+									<div class="experience-info clear-after">
+										<h5>フードコーディネータ専門学校</h5>
+										<div class="role">Food Coordinator</div>
+										<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America</p>
+									</div><!-- experience-info -->
+								</div><!-- experience -->
+								<div class="experience">
+									<span class="circle"></span>
+									<div class="experience-img"><img src="http://placehold.it/120x120/ddd/fff&text=Beetle%20image" alt=""></div>
+									<div class="experience-info clear-after">
+										<h5>Amazon</h5>
+										<div class="role">UI/UX Designer</div>
+										<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America</p>
+									</div><!-- experience-info -->
+								</div><!-- experience -->								
+							</div><!-- year -->
+							<div class="year">
+								<time datetime="2012">2012</time>
+								<div class="experience">
+									<span class="circle"></span>
+									<div class="experience-img"><img src="http://placehold.it/120x120/ddd/fff&text=Beetle%20image" alt=""></div>
+									<div class="experience-info clear-after">
+										<h5>ABCクッキング</h5>
+										<div class="role">UI/UX Designer</div>
+										<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America</p>
+									</div><!-- experience-info -->
+								</div><!-- experience -->
+								<div class="experience">
+									<span class="circle"></span>
+									<div class="experience-img"><img src="http://placehold.it/120x120/ddd/fff&text=Beetle%20image" alt=""></div>
+									<div class="experience-info clear-after">
+										<h5>IBM</h5>
+										<div class="role">UI/UX Designer</div>
+										<p>October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America</p>
+									</div><!-- experience-info -->
+								</div><!-- experience -->								
+							</div><!-- year -->							
+						</div><!-- timeline -->
+					</div>	
+				</section>
+		</div>
+
+
+		<!--div id="skills-section"-->
+		<div id="skills-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+				<section class="row section">
+					<div class="row-content buffer even clear-after">
+						<div class="column four">
+							<div class="small-icon red"><i class="icon icon-paperfly"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>お弁当</h4>
+								<p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<div class="column four">
+							<div class="small-icon red"><i class="icon icon-diamond"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>スイーツ</h4>
+								<p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<div class="column four last">
+							<div class="small-icon red"><i class="icon icon-crown"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>盛り付け</h4>
+								<p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<div class="column four">
+							<div class="small-icon red"><i class="icon icon-tablet"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>バランス</h4>
+								<p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<div class="column four">
+							<div class="small-icon red"><i class="icon icon-megaphone"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>色合い</h4>
+								<p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+						<div class="column four last">
+							<div class="small-icon red"><i class="icon icon-multiview"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>創作</h4>
+								<p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+					</div>
+				</section>	
+		</div><!--div id="skills-section"-->
+
+
+		<!--div id="cooking-section"-->
+		<div id="cooking-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+		<section class="row section">
+					<div class="row-content buffer even clear-after">					
+						<div class="section-title"><h3>Cooking</h3></div>
+						<div class="grid-items blog-section masonry-style preload">
+
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/1438.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">Interior design</h5>
+											<h2>A confortable desk</h2>
+										</div><!-- blog-excerpt -->
+									</div><!-- blog-excerpt-inner -->	
+								</a>
+							</article>		
+
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/1439.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">Relax, Hobbies</h5>
+											<h2>How I spend my time</h2>
+											<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div><!-- blog-excerpt-inner -->		
+									</div><!-- blog-excerpt -->								
+								</a>
+							</article>											
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/1444.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">Holidays</h5>
+											<h2>Snow &amp; silence</h2>
+											<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div><!-- blog-excerpt -->	
+									</div><!-- blog-excerpt-inner -->
+								</a>
+							</article>
+							
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/1445.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">Web Design</h5>
+											<h2>Build awesome layouts</h2>
+											<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div><!-- blog-excerpt -->	
+									</div><!-- blog-excerpt-inner -->							
+								</a>
+							</article>	
+
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/1447.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">Web Design</h5>
+											<h2>Build awesome layouts</h2>
+											<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div><!-- blog-excerpt -->	
+									</div><!-- blog-excerpt-inner -->							
+								</a>
+							</article>	
+
+
+					<!--		
+						<article class="item column six">
+							<figure><img src="img/1438.jpg" alt="中川学院" alt=""></figure>
+
+							<a class="overlay " href="http://nakagawagakuin.ehoh.net/" target="_blank">
+								<div class="overlay-content">
+									<div class="post-type"><i class="icon icon-search"></i></div>
+									<h2>中川学院</h2>
+									<p>受講3ヶ月目の課題。<br>クライアントへのヒアリング、コンセプト作成、提案、写真編集、<br>デザインからコーディングまで全て行った。</p>
+								</div>
+							</a>
+						</article> -->	
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/1436.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">Photography, Instagram</h5>
+											<h2>We are all made of stars</h2>
+										</div><!-- blog-excerpt -->	
+									</div><!-- blog-excerpt-inner -->							
+								</a>
+							</article>																		
+							
+							<div class="shuffle-sizer three"></div>
+						</div><!-- grid-items -->
+						<div class="more-btn"><a class="button transparent aqua" href="#">Read all News</a></div>						
+					</div>	
+				</section>	
+		</div>
+
+		
+		<!--div id="locale-section"
+		<div id="locale-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+				<section class="row section">
+					<div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="15" data-color="" data-height="22.222" data-img="img/marker.png" data-info="I am based in London, UK"></div>
+				</section>									
+		</div>
+		-->
+
+
+		<!--div id="contact-section"-->
+		<div id="contact-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+
+				<section class="row section">
+					<div class="row-content buffer even clear-after">
+						<div class="section-title"><h3>Contact Me</h3></div>	
+						<p>I’m an experienced and passionate user interface designer with interaction design background.<br>My goal is to make the world wide web a better place by designing beautiful user experiences, one site at a time.</p>
+						
+						<div class="column nine">
+							<form id="myForm" class="contact-section" name="myFormName">
+								<span class="pre-input"><i class="icon icon-user"></i></span>
+								<input class="name plain buffer" type="text" id="mysubject" placeholder="Subject">
+								
+								<span class="pre-input"><i class="icon icon-email"></i></span>
+								<input class="email plain buffer" type="email" id="myemail" placeholder="Email address">
+								
+								<textarea class="plain buffer" id="mymessage" placeholder="Don't forget that kindness is all!"></textarea>
+								
+								<input type="button" class="plain button red"  value="Send a Message" id="mybutton">
+							</form>	
+							<div id="success"></div>
+						</div>
+
+
+						<div class="column three last">
+							<div class="widget">
+								<h4>Location</h4>
+								<p>
+									13, 2 Elizabeth ST,<br>
+									Melbourne, Victoria 3000,<br>
+									Australia
+								</p>
+							</div>
+							<div class="widget">
+								<h4>I am Social</h4>
+								<ul class="inline meta-social">
+									<li><a href="#" class="twitter-share border-box"><i class="fa fa-twitter fa-lg"></i></a></li>
+									<li><a href="#" class="facebook-share border-box"><i class="fa fa-facebook fa-lg"></i></a></li>
+									<li><a href="#" class="pinterest-share border-box"><i class="fa fa-pinterest fa-lg"></i></a></li>
+								</ul>
+							</div>								
+						</div>
+
+					</div>
+				</section>
+
+			</div><!--div id="contact-section"-->
+
+
+
+		</div><!-- id-main -->
+
+
+
+
+
+
+		<footer role="contentinfo">
+			<div class="row">
+				<div class="row-content buffer clear-after">
+					<section id="top-footer">
+						<div class="widget column three"><!-- la class="widget" è forse generata utomaticamente da wp -->
+							<h4>Menu</h4>
+							<ul class="plain">
+								<li><a href="home-01.html">Home</a></li>
+								<li><a href="works-3-columns.html">Portfolio</a></li>
+								<li><a href="blog-4-columns-masonry.html">Blog</a></li>
+								<li><a href="resume.html">Resume</a></li>
+								<li><a href="file:///Users/pasqualevitiello/My%20Folder/Job/Envato/PR%20Themeforest/Flattie/Markup/Beetle/contact.html">Contact</a></li>
+							</ul>
+						</div>
+						<div class="widget column three">
+							<h4>Archives</h4>
+							<ul class="plain">
+								<li><a href="#">March 2014</a></li>
+								<li><a href="#">April 2014</a></li>
+								<li><a href="#">May 2014</a></li>
+								<li><a href="#">June 2014</a></li>
+								<li><a href="#">July 2014</a></li>
+							</ul>
+						</div>								
+						<div class="widget column three">
+							<h4>Widget</h4>
+							<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						</div>				
+						<div class="widget meta-social column three">
+							<h4>Follow Us</h4>
+							<ul class="inline">
+								<li><a href="#" class="twitter-share border-box"><i class="fa fa-twitter fa-lg"></i></a></li>
+								<li><a href="#" class="facebook-share border-box"><i class="fa fa-facebook fa-lg"></i></a></li>
+								<li><a href="#" class="pinterest-share border-box"><i class="fa fa-pinterest fa-lg"></i></a></li>
+							</ul>
+						</div>														
+					</section><!-- top-footer -->
+					<section id="bottom-footer">
+						<p class="keep-left">&copy; 2014 <a href="http://mokaine.com/" alt="Mokaine Lab">Mokaine</a>. All Rights Reserved.</p>
+						<p class="keep-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+					</section><!-- bottom-footer -->			
+				</div><!-- row-content -->	
+			</div><!-- row -->	
+		</footer>
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>		
+		<script src="js/plugins.js"></script>
+		<script src="js/beetle.js"></script>
+
+	</body>
+
+</html>
