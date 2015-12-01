@@ -13,6 +13,8 @@ serverless Website by aws
 
 ## Demo
 
+http://my-aws-bucket-miyuki.s3-website-us-west-2.amazonaws.com/
+
 ## VS. 
 
 ## Requirement
