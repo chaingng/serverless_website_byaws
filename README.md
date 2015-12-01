@@ -2,7 +2,7 @@
 ====
 
 ## Overview
-serverless Website by aws
+serverless and super-lowcost website by aws
 
 ## Description
 * S3 : store webpages
