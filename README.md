@@ -5,7 +5,7 @@
 
 ## Description
 
-![](https://github.com/chaingng/serverless_website_byaws/blob/master/capture/AWS-image.gif)
+![](https://github.com/chaingng/serverless_website_byaws/blob/master/capture/AWS-images.gif)
 
 ## Demo
 
