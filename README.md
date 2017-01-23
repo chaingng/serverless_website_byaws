@@ -15,12 +15,6 @@ serverless and super-lowcost website by aws
 
 http://my-aws-bucket-miyuki.s3-website-us-west-2.amazonaws.com/
 
-## Requirement
-
-## Usage
-
-## Install
-
 ## Licence
 MIT
 
